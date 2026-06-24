@@ -19,7 +19,13 @@ for letter in tempteststore:
             finaldecisionstore.append(" ")
             found = True
         elif alpha[i] == letter:
-            finaldecisionstore.append(alpha[i-lettershift])
+            finaldecisionstore.append(alpha[i - lettershift])
+            found = True
+        elif letter.isdigit():
+            finaldecisionstore.append(letter)
+            found = True
+        elif letter in ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", ";", ":", "'", '"', ",", ".", "<", ">", "/", "?", "\\", "|"]:
+            finaldecisionstore.append(letter)
             found = True
         else:
             i += 1
